@@ -1,140 +1,140 @@
-# 🔐 SheerID Verification Tool
+# 🔐 SheerID 驗證工具
 
 [![GitHub Stars](https://img.shields.io/github/stars/ThanhNguyxn/SheerID-Verification-Tool?style=social)](https://github.com/ThanhNguyxn/SheerID-Verification-Tool/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![Documentation](https://img.shields.io/badge/Docs-Website-2ea44f?style=flat&logo=github&logoColor=white)](https://thanhnguyxn.github.io/SheerID-Verification-Tool/)
 
-A comprehensive collection of tools for automating SheerID verification workflows for various services (Spotify, YouTube, Google One, etc.).
+一套全面的工具集合，用於自動化各種服務（Spotify、YouTube、Google One 等）的 SheerID 驗證工作流程。
 
 ---
 
-## 🛠️ Available Tools
+## 🛠️ 可用工具
 
-| Tool | Type | Target | Description |
+| 工具 | 類型 | 目標 | 描述 |
 |------|------|--------|-------------|
-| [spotify-verify-tool](./spotify-verify-tool/) | 🎵 Student | Spotify Premium | University student verification |
-| [youtube-verify-tool](./youtube-verify-tool/) | 🎬 Student | YouTube Premium | University student verification |
-| [one-verify-tool](./one-verify-tool/) | 🤖 Student | Gemini Advanced | Google One AI Premium verification |
-| [boltnew-verify-tool](./boltnew-verify-tool/) | 👨‍🏫 Teacher | Bolt.new | Teacher verification (University) |
-| [canva-teacher-tool](./canva-teacher-tool/) | 🇬🇧 Teacher | Canva Education | UK Teacher verification (K-12) |
-| [k12-verify-tool](./k12-verify-tool/) | 🏫 K12 | ChatGPT Plus | K12 Teacher verification (High School) |
-| [veterans-verify-tool](./veterans-verify-tool/) | 🎖️ Military | General | Military status verification |
-| [veterans-extension](./veterans-extension/) | 🧩 Chrome | Browser | Chrome extension for military verification |
+| [spotify-verify-tool](./spotify-verify-tool/) | 🎵 學生 | Spotify 高級版 | 大學生身份驗證 |
+| [youtube-verify-tool](./youtube-verify-tool/) | 🎬 學生 | YouTube 高級版 | 大學生身份驗證 |
+| [one-verify-tool](./one-verify-tool/) | 🤖 學生 | Gemini Advanced | Google One AI 高級版驗證 |
+| [boltnew-verify-tool](./boltnew-verify-tool/) | 👨‍🏫 教師 | Bolt.new | 教師身份驗證（大學）|
+| [canva-teacher-tool](./canva-teacher-tool/) | 🇬🇧 教師 | Canva Education | 英國教師身份驗證（K-12）|
+| [k12-verify-tool](./k12-verify-tool/) | 🏫 K12 | ChatGPT Plus | K12 教師身份驗證（高中）|
+| [veterans-verify-tool](./veterans-verify-tool/) | 🎖️ 軍人 | 通用 | 軍人身份驗證 |
+| [veterans-extension](./veterans-extension/) | 🧩 Chrome | 瀏覽器 | 軍人身份驗證的 Chrome 擴展 |
 
-### 🔗 External Tools
+### 🔗 外部工具
 
-| Tool | Type | Description |
+| 工具 | 類型 | 描述 |
 |------|------|-------------|
-| [RoxyBrowser](https://roxybrowser.com?code=01045PFA) | 🦊 Browser | **Anti-detect browser** — Safely manage multiple verified accounts without getting banned |
-| [Check IP](https://ip123.in/en?code=01045PFA) | 🌐 Web | **Check IP** — Check your IP address and proxy status |
-| [SheerID Verification Bot](https://t.me/SheerID_Verification_bot?start=ref_LdPKPES3Ej) | 🤖 Bot | Automated Telegram verification bot |
-| [GPT Bot](https://t.me/vgptplusbot?start=ref_7762497789) | 🤖 Bot | Automated verification bot |
-| [Student Card Generator](https://thanhnguyxn.github.io/student-card-generator/) | 🎓 Tool | Create student cards for manual verification |
-| [Payslip Generator](https://thanhnguyxn.github.io/payslip-generator/) | 💰 Tool | Generate payslips for teacher verification |
+| [RoxyBrowser](https://roxybrowser.com?code=01045PFA) | 🦊 瀏覽器 | **防檢測瀏覽器** — 安全管理多個驗證帳戶而不被封禁 |
+| [Check IP](https://ip123.in/en?code=01045PFA) | 🌐 Web | **檢查 IP** — 檢查您的 IP 地址和代理狀態 |
+| [SheerID Verification Bot](https://t.me/SheerID_Verification_bot?start=ref_LdPKPES3Ej) | 🤖 Bot | 自動化 Telegram 驗證機器人 |
+| [GPT Bot](https://t.me/vgptplusbot?start=ref_7762497789) | 🤖 Bot | 自動化驗證機器人 |
+| [Student Card Generator](https://thanhnguyxn.github.io/student-card-generator/) | 🎓 工具 | 為手動驗證建立學生卡 |
+| [Payslip Generator](https://thanhnguyxn.github.io/payslip-generator/) | 💰 工具 | 生成教師驗證用的薪資單 |
 
 ---
 
-## 🧠 Core Architecture & Logic
+## 🧠 核心架構與邏輯
 
-All Python tools in this repository share a common, optimized architecture designed for high success rates.
+本存儲庫中的所有 Python 工具共享一個常見的優化架構，旨在實現高成功率。
 
-### 1. The Verification Flow
-The tools follow a standardized "Waterfall" process:
-1.  **Data Generation**: Creates a realistic identity (Name, DOB, Email) matching the target demographic.
-2.  **Submission (`collectStudentPersonalInfo`)**: Submits data to SheerID API.
-3.  **SSO Skip (`DELETE /step/sso`)**: Crucial step. Bypasses the requirement to log in to a school portal.
-4.  **Document Upload (`docUpload`)**: Uploads a generated proof document (Student ID, Transcript, or Teacher Badge).
-5.  **Completion (`completeDocUpload`)**: Signals to SheerID that upload is finished.
+### 1. 驗證流程
+工具遵循標準化的「瀑布」流程：
+1.  **數據生成**：創建與目標人群相符的現實身份（名字、出生日期、電子郵件）。
+2.  **提交（`collectStudentPersonalInfo`）**：將數據提交至 SheerID API。
+3.  **SSO 跳過（`DELETE /step/sso`）**：關鍵步驟。繞過需要登錄學校門戶網站的要求。
+4.  **文件上傳（`docUpload`）**：上傳生成的證明文件（學生證、成績單或教師徽章）。
+5.  **完成（`completeDocUpload`）**：向 SheerID 發出上傳完成的信號。
 
-### 2. Intelligent Strategies
+### 2. 智能策略
 
-#### 🎓 University Strategy (Spotify, YouTube, Gemini)
-- **Weighted Selection**: Uses a curated list of **45+ Universities** (US, VN, JP, KR, etc.).
-- **Success Tracking**: Universities with higher success rates are selected more often.
-- **Document Gen**: Generates realistic-looking Student ID cards with dynamic names and dates.
+#### 🎓 大學策略（Spotify、YouTube、Gemini）
+- **加權選擇**：使用精選的 **45+ 所大學**列表（美國、越南、日本、韓國等）。
+- **成功跟蹤**：成功率較高的大學會被更頻繁地選中。
+- **文件生成**：生成外觀逼真的學生證，具有動態名字和日期。
 
-#### 👨‍🏫 Teacher Strategy (Bolt.new)
-- **Age Targeting**: Generates older identities (25-55 years old) to match teacher demographics.
-- **Document Gen**: Creates "Employment Certificates" instead of Student IDs.
-- **Endpoint**: Targets `collectTeacherPersonalInfo` instead of student endpoints.
+#### 👨‍🏫 教師策略（Bolt.new）
+- **年齡定位**：生成較老的身份（25-55 歲）以符合教師人口統計。
+- **文件生成**：創建「聘用證書」而不是學生證。
+- **端點**：定位 `collectTeacherPersonalInfo` 而不是學生端點。
 
-#### 🏫 K12 Strategy (ChatGPT Plus)
-- **School Type Targeting**: Specifically targets schools with `type: "K12"` (not `HIGH_SCHOOL`).
-- **Auto-Pass Logic**: K12 verification often **auto-approves** without document upload if the school and teacher info match.
-- **Fallback**: If upload is required, it generates a Teacher Badge.
+#### 🏫 K12 策略（ChatGPT Plus）
+- **學校類型定位**：特別針對類型為 `type: "K12"`（而非 `HIGH_SCHOOL`）的學校。
+- **自動通過邏輯**：K12 驗證通常在學校和教師信息相符時自動批准，無需文件上傳。
+- **備用方案**：如果需要上傳，它將生成教師徽章。
 
-#### 🎖️ Veterans Strategy (ChatGPT Plus)
-- **Strict Eligibility**: Targets Active Duty or Veterans separated within the **last 12 months**.
-- **Authoritative Check**: SheerID verifies against DoD/DEERS database.
-- **Logic**: Defaults to recent discharge dates to maximize auto-approval chances.
+#### 🎖️ 退伍軍人策略（ChatGPT Plus）
+- **嚴格符合條件**：針對現役或在 **過去 12 個月內**退役的退伍軍人。
+- **權威檢查**：SheerID 針對 DoD/DEERS 資料庫進行驗證。
+- **邏輯**：預設最近的退役日期以最大化自動批准機會。
 
-#### 🛡️ Anti-Detection Module
-All tools now include `anti_detect.py` which provides:
-- **Random User-Agents**: 10+ real browser UA strings (Chrome, Firefox, Edge, Safari)
-- **Browser-like Headers**: Proper `sec-ch-ua`, `Accept-Language`, etc.
-- **TLS Fingerprint Spoofing**: Uses `curl_cffi` to impersonate Chrome's JA3/JA4 fingerprint
-- **Random Delays**: Gamma distribution timing to mimic human behavior
-- **Smart Session**: Auto-selects best available HTTP library (curl_cffi > cloudscraper > httpx > requests)
-- **NewRelic Headers**: Required tracking headers for SheerID API calls
-- **Session Warming**: Pre-verification requests to establish legitimate browser session
-- **Email Generation**: Creates realistic student emails matching university domains
-- **Proxy Geo-Matching**: Matches proxy location to university country for consistency
-- **Multi-Browser Impersonation**: Rotates between Chrome, Edge, and Safari fingerprints
+#### 🛡️ 反檢測模塊
+所有工具現在都包含 `anti_detect.py`，提供：
+- **隨機用戶代理**：10+ 個真實瀏覽器 UA 字符串（Chrome、Firefox、Edge、Safari）
+- **類瀏覽器標頭**：適當的 `sec-ch-ua`、`Accept-Language` 等。
+- **TLS 指紋欺騙**：使用 `curl_cffi` 模擬 Chrome 的 JA3/JA4 指紋
+- **隨機延遲**：伽馬分佈計時以模擬人類行為
+- **智能會話**：自動選擇最佳可用 HTTP 庫（curl_cffi > cloudscraper > httpx > requests）
+- **NewRelic 標頭**：SheerID API 呼叫所需的跟蹤標頭
+- **會話預熱**：驗證前的請求以建立合法的瀏覽器會話
+- **電子郵件生成**：創建與大學域相符的現實學生電子郵件
+- **代理地理匹配**：將代理位置與大學國家相匹配以保持一致性
+- **多瀏覽器模擬**：在 Chrome、Edge 和 Safari 指紋之間輪換
 
-#### 📄 Document Generation Module
-New `doc_generator.py` provides anti-detection for generated documents:
-- **Noise Injection**: Random pixel noise to avoid template detection
-- **Color Variation**: 6 different color schemes for uniqueness
-- **Dynamic Positioning**: ±3px variance on element positions
-- **Multiple Types**: Student ID, Transcript, Teacher Badge
-- **Realistic Details**: Random barcodes, QR codes, course grades
+#### 📄 文件生成模塊
+新的 `doc_generator.py` 為生成的文件提供反檢測：
+- **噪聲注入**：隨機像素噪聲以避免模板檢測
+- **色彩變化**：6 種不同的色彩方案以確保獨特性
+- **動態定位**：元素位置的 ±3px 方差
+- **多種類型**：學生證、成績單、教師徽章
+- **逼真細節**：隨機條形碼、二維碼、課程成績
 
 > [!WARNING]
-> **API-Based Tools Have Inherent Limitations**
+> **基於 API 的工具具有固有的限制**
 >
-> SheerID uses advanced detection including:
-> - **TLS Fingerprinting**: Python `requests`/`httpx` have detectable signatures
-> - **Signal Intelligence**: IP address, device attributes, email age analysis
-> - **AI Document Review**: Detects forged/template documents
+> SheerID 使用高級檢測，包括：
+> - **TLS 指紋識別**：Python `requests`/`httpx` 有可檢測的簽名
+> - **信號情報**：IP 地址、設備屬性、電子郵件年齡分析
+> - **AI 文件審查**：檢測偽造/模板文件
 >
-> For best results: Use **residential proxies** + install `curl_cffi` for TLS spoofing.
-> Browser extensions generally have higher success rates than API tools.
+> 為獲得最佳結果：使用 **住宅代理** + 安裝 `curl_cffi` 進行 TLS 欺騙。
+> 瀏覽器擴展通常比 API 工具具有更高的成功率。
 
 > [!IMPORTANT]
-> **Gemini/Google One is US-ONLY (since Jan 2026)**
+> **Gemini/Google One 僅限美國（自 2026 年 1 月起）**
 >
-> The `one-verify-tool` only works with US IPs. International users will see verification failures.
+> `one-verify-tool` 僅適用於美國 IP。國際用戶將看到驗證失敗。
 
 ---
 
-## 📋 Quick Start
+## 📋 快速入門
 
-### Prerequisites
+### 先決條件
 - Python 3.8+
 - `pip`
 
-### Installation
+### 安裝
 
-1.  **Clone the repository:**
+1.  **克隆存儲庫：**
     ```bash
     git clone https://github.com/ThanhNguyxn/SheerID-Verification-Tool.git
     cd SheerID-Verification-Tool
     ```
 
-2.  **Install dependencies:**
+2.  **安裝依賴項：**
     ```bash
     pip install httpx Pillow
     ```
 
-3.  **[Optional] Enhanced Anti-Detection:**
+3.  **[可選] 增強反檢測：**
     ```bash
     pip install curl_cffi cloudscraper
     ```
-    - `curl_cffi`: Spoofs TLS fingerprint (JA3/JA4) to look like real Chrome
-    - `cloudscraper`: Bypasses Cloudflare protection
+    - `curl_cffi`：欺騙 TLS 指紋（JA3/JA4）看起來像真正的 Chrome
+    - `cloudscraper`：繞過 Cloudflare 保護
 
-4.  **Run a tool (e.g., Spotify):**
+4.  **運行工具（例如 Spotify）：**
     ```bash
     cd spotify-verify-tool
     python main.py "YOUR_SHEERID_URL"
@@ -142,43 +142,43 @@ New `doc_generator.py` provides anti-detection for generated documents:
 
 ---
 
-## 🦊 Official Partner: RoxyBrowser
+## 🦊 官方合作伙伴：RoxyBrowser
 
-🛡 **Anti-Detect Protection** — Unique fingerprint for each account, looks like different real devices.
+🛡 **反檢測保護** — 每個帳戶具有唯一指紋，看起來像不同的真實設備。
 
-📉 **Prevent Linkage** — Stops SheerID and platforms from linking your accounts.
+📉 **防止關聯** — 阻止 SheerID 和平台關聯您的帳戶。
 
-🚀 **Ideal for Bulk Users** — Safely manage hundreds of verified accounts.
+🚀 **適合批量用戶** — 安全管理數百個驗證帳戶。
 
-[![Try for free](https://img.shields.io/badge/Try%20for%20free-RoxyBrowser-ff6b35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://roxybrowser.com?code=01045PFA)
-
----
-
-## ⚠️ Disclaimer
-
-This project is for **educational purposes only**. The tools demonstrate how verification systems work and how they can be tested.
-- Do not use this for fraudulent purposes.
-- The authors are not responsible for any misuse.
-- Respect the Terms of Service of all platforms.
+[![免費試用](https://img.shields.io/badge/Try%20for%20free-RoxyBrowser-ff6b35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://roxybrowser.com?code=01045PFA)
 
 ---
 
-## 🤝 Contributing
+## ⚠️ 免責聲明
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+本項目僅用於 **教育目的**。這些工具演示了驗證系統的工作原理以及如何對其進行測試。
+- 不要將其用於欺詐目的。
+- 作者不對任何不當使用負責。
+- 尊重所有平台的服務條款。
 
 ---
 
-## ❤️ Support
+## 🤝 貢獻
 
-If you find this project helpful, consider supporting me:
+歡迎貢獻！請隨時提交拉取請求。
+
+---
+
+## ❤️ 支持
+
+如果您覺得本項目有幫助，請考慮支持我：
 
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github)](https://github.com/sponsors/ThanhNguyxn)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/thanhnguyxn)
 
 ---
 
-## 🌐 Translations
+## 🌐 翻譯
 
 | 🇺🇸 [English](./README.md) | 🇻🇳 [Tiếng Việt](./docs/README.vi.md) | 🇨🇳 [中文](./docs/README.zh.md) | 🇯🇵 [日本語](./docs/README.ja.md) | 🇰🇷 [한국어](./docs/README.ko.md) |
 |:---:|:---:|:---:|:---:|:---:|
