@@ -28,6 +28,7 @@
 |------|------|-------------|
 | [RoxyBrowser](https://roxybrowser.com?code=01045PFA) | 🦊 瀏覽器 | **防檢測瀏覽器** — 安全管理多個驗證帳戶而不被封禁 |
 | [Check IP](https://ip123.in/en?code=01045PFA) | 🌐 Web | **檢查 IP** — 檢查您的 IP 地址和代理狀態 |
+| [老司機瀏覽器檢查](https://www.browserscan.net/tc) | 🌐 Web | **檢查 IP** — 檢查您的 IP 地址和代理狀態 |
 | [SheerID Verification Bot](https://t.me/SheerID_Verification_bot?start=ref_LdPKPES3Ej) | 🤖 Bot | 自動化 Telegram 驗證機器人 |
 | [GPT Bot](https://t.me/vgptplusbot?start=ref_7762497789) | 🤖 Bot | 自動化驗證機器人 |
 | [Student Card Generator](https://thanhnguyxn.github.io/student-card-generator/) | 🎓 工具 | 為手動驗證建立學生卡 |
@@ -160,28 +161,3 @@
 - 不要將其用於欺詐目的。
 - 作者不對任何不當使用負責。
 - 尊重所有平台的服務條款。
-
----
-
-## 🤝 貢獻
-
-歡迎貢獻！請隨時提交拉取請求。
-
----
-
-## ❤️ 支持
-
-如果您覺得本項目有幫助，請考慮支持我：
-
-[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github)](https://github.com/sponsors/ThanhNguyxn)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/thanhnguyxn)
-
----
-
-## 🌐 翻譯
-
-| 🇺🇸 [English](./README.md) | 🇻🇳 [Tiếng Việt](./docs/README.vi.md) | 🇨🇳 [中文](./docs/README.zh.md) | 🇯🇵 [日本語](./docs/README.ja.md) | 🇰🇷 [한국어](./docs/README.ko.md) |
-|:---:|:---:|:---:|:---:|:---:|
-| 🇪🇸 [Español](./docs/README.es.md) | 🇫🇷 [Français](./docs/README.fr.md) | 🇩🇪 [Deutsch](./docs/README.de.md) | 🇧🇷 [Português](./docs/README.pt-BR.md) | 🇷🇺 [Русский](./docs/README.ru.md) |
-| 🇸🇦 [العربية](./docs/README.ar.md) | 🇮🇳 [हिन्दी](./docs/README.hi.md) | 🇹🇭 [ไทย](./docs/README.th.md) | 🇹🇷 [Türkçe](./docs/README.tr.md) | 🇵🇱 [Polski](./docs/README.pl.md) |
-| 🇮🇹 [Italiano](./docs/README.it.md) | 🇮🇩 [Bahasa Indonesia](./docs/README.id.md) | | | |
