@@ -1,4 +1,4 @@
-# 🔐 SheerID 驗證工具
+# 🔐 神秘哞ㄉ SheerID 驗證工具
 
 [![GitHub Stars](https://img.shields.io/github/stars/ThanhNguyxn/SheerID-Verification-Tool?style=social)](https://github.com/ThanhNguyxn/SheerID-Verification-Tool/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
