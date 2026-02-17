@@ -119,7 +119,7 @@
 
 1.  **克隆存儲庫：**
     ```bash
-    git clone https://github.com/ThanhNguyxn/SheerID-Verification-Tool.git
+    git clone https://github.com/dryade36513/MooMoo-SheerID-Verification-Magic-Tools.git
     cd SheerID-Verification-Tool
     ```
 
