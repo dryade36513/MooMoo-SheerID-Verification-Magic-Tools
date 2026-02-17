@@ -143,18 +143,6 @@
 
 ---
 
-## 🦊 官方合作伙伴：RoxyBrowser
-
-🛡 **反檢測保護** — 每個帳戶具有唯一指紋，看起來像不同的真實設備。
-
-📉 **防止關聯** — 阻止 SheerID 和平台關聯您的帳戶。
-
-🚀 **適合批量用戶** — 安全管理數百個驗證帳戶。
-
-[![免費試用](https://img.shields.io/badge/Try%20for%20free-RoxyBrowser-ff6b35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://roxybrowser.com?code=01045PFA)
-
----
-
 ## ⚠️ 免責聲明
 
 本項目僅用於 **教育目的**。這些工具演示了驗證系統的工作原理以及如何對其進行測試。
